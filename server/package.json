@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "this is api server for videoblogg apps",
+  "main": "index.js",
+  "scripts": {
+    "start":"json-server --watch db_video.json --no-cors true --port 7000"
+  },
+  "author": "m a hossain",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
