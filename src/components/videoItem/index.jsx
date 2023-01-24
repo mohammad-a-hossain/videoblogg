@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { searchAuthor } from '../../features/filters/filtersSlice';
+
 
 export const VideoItem = ({video ={}}) => {
     const {avatar,duration,thumbnail,title,author,views,date,id} = video
+    const dispatch = useDispatch()
+
+    const getAuthor =(e)=>{
+        dispatch(searchAuthor(author))
+         console.log(author)
+    }
   return (
     <div
     class="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]"
@@ -43,8 +52,7 @@ export const VideoItem = ({video ={}}) => {
                 </a>
                 <a
                     class="text-gray-400 text-xs mt-2 hover:text-gray-600"
-                    href="333"
-                >
+                    href="333" onClick={()=>getAuthor(author)}>
                    {author}
                 </a>
                 <p class="text-gray-400 text-xs mt-1">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { textSearch } from '../../features/filters/filtersSlice';
+import { resetAll, textSearch } from '../../features/filters/filtersSlice';
 
  const Navbar = () => {
     const dispatch = useDispatch()
@@ -22,6 +22,11 @@ import { textSearch } from '../../features/filters/filtersSlice';
         if(!match){
             navigate('/')
         }
+    }
+
+    const handleReset=()=>{
+        dispatch(resetAll)
+        setInput('')
     }
   return (
     <nav class="bg-slate-100 shadow-md">
@@ -54,6 +59,13 @@ import { textSearch } from '../../features/filters/filtersSlice';
                 src="./assets/search.svg"
                 alt="Search"
             />
+        </div>
+        <div
+            class="border border-slate-200 flex items-center bg-white h-10 px-5 rounded-lg text-sm ring-emerald-200"
+        >
+           <button onClick={handleReset}>reset</button>
+         
+           
         </div>
     </div>
 </nav>

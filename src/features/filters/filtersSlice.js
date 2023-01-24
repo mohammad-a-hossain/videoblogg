@@ -3,13 +3,15 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState={
    tags:[],
-   search:''
+   search:'',
+   author:''
 }
 
 const fitersSlice = createSlice({
    name:'filters',
    initialState,
    reducers:{
+   
     tagSelected:(state,action)=>{
           state.tags.push(action.payload) 
     },
@@ -21,11 +23,15 @@ const fitersSlice = createSlice({
     },
     textSearch:(state,action) =>{
         state.search =action.payload
-    }
+    },
+    searchAuthor:(state,action) =>{
+      state.author = action.payload
+    },
+    resetAll:(state)=> state.tags=[initialState],
    }
          
 })
-export const {tagRemoved,tagSelected,textSearch} = fitersSlice.actions
+export const {tagRemoved,tagSelected,textSearch,resetAll,searchAuthor} = fitersSlice.actions
 
 export default fitersSlice.reducer
 
