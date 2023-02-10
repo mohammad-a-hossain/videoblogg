@@ -1,4 +1,4 @@
-# Getting Started with Create React App and Redux
+# Getting Started with Create React App and Redux tool kit 
 
 ## command line git src : https://github.com/reduxjs/cra-template-redux
 
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 =======
 ## project summary:
- it is a mini project for practising React Tool Kit (rtk) 
+ it is a mini project for practising React Tool Kit (not rtk) 
 ## project technologies:
 * it is react-redux project templete 
 * api for json-server
