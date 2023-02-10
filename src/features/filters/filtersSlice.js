@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState={
    tags:[],
    search:'',
-   author:''
+   
 }
 
 const fitersSlice = createSlice({
@@ -27,7 +27,7 @@ const fitersSlice = createSlice({
     searchAuthor:(state,action) =>{
       state.author = action.payload
     },
-    resetAll:(state)=> state.tags=[initialState],
+    resetAll:(state)=> state.tags=[],
    }
          
 })

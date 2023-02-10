@@ -11,8 +11,6 @@ import { resetAll, textSearch } from '../../features/filters/filtersSlice';
      const match = useMatch('/')
      const navigate = useNavigate()
 
-      
-
     const [input,setInput] = useState(search)
      
     const handleSearch = (e)=>{
@@ -25,9 +23,10 @@ import { resetAll, textSearch } from '../../features/filters/filtersSlice';
     }
 
     const handleReset=()=>{
-        dispatch(resetAll)
+        dispatch(resetAll())
         setInput('')
     }
+    
   return (
     <nav class="bg-slate-100 shadow-md">
     <div
@@ -37,7 +36,7 @@ import { resetAll, textSearch } from '../../features/filters/filtersSlice';
             <img
                 class="h-10"
                 src="./assets/lws.svg"
-                alt="rtk mini project"
+                alt="toolkit mini project"
             />
         </Link>
         <div

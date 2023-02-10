@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { searchAuthor } from '../../features/filters/filtersSlice';
+//import { searchAuthor } from '../../features/filters/filtersSlice';
 
 
 export const VideoItem = ({video ={}}) => {
     const {avatar,duration,thumbnail,title,author,views,date,id} = video
     const dispatch = useDispatch()
 
+
     const getAuthor =(e)=>{
-        dispatch(searchAuthor(author))
-         console.log(author)
+        dispatch(author)
+      //  alert(author)
+         //console.log(author)
     }
   return (
     <div
